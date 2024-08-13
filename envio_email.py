@@ -55,7 +55,7 @@ if st.button('Enviar E-mails'):
                 server.sendmail(email_user, destinatario, text)  # Enviar e-mail
                 st.success(f'E-mail enviado para {destinatario}')
             except Exception as e:
-                st.error(f'Erro ao enviar e-mail para {destinatario}, verifique se sua senha foi gerada pelo Google app, a senha do seu email pessoal não irá funcionar. Verifique na sua conta do Google se a verificação de dois fatores está ligada e pesuise em "Senhas de app" para gerar a senha que funcionara para a API funcionar.: {str(e)}')
+                st.error(f'Erro ao enviar e-mail para {destinatario}, verifique se sua senha foi gerada pelo Google app, a senha do seu email pessoal não irá funcionar. Verifique na sua conta do Google se a verificação de dois fatores está ligada e pesuise em "Senhas de app" para gerar a senha que sera responsável por fazer a API funcionar-> Detalhe {str(e)}')
             finally:
                 server.quit()  # Fechar a conexão com o servidor
 
